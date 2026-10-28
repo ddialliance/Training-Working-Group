@@ -1,20 +1,26 @@
 # DDI Alliance Training Working Group
 
-Open training materials produced by the [DDI Alliance](https://ddialliance.org) **Training Working Group (TWG)**. The repository hosts self-paced microlearning courses (MOOCs) about the Data Documentation Initiative (DDI) metadata standards. The courses are published as static web pages through GitHub Pages.
+This is the home repository of the [DDI Alliance](https://ddialliance.org) **Training Working Group (TWG)**. It holds the open training materials the group develops to help people learn and apply the Data Documentation Initiative (DDI) metadata standards. Materials are published as static web pages through GitHub Pages, so anyone can use them free of charge without an account.
 
-**Live site:** <https://ddialliance.github.io/Training-Working-Group/>
+The collection will grow over time as the TWG and its contributors add courses on different DDI products, topics and audiences.
+
+**Repository:** <https://github.com/ddialliance/Training-Working-Group>
 
 ---
 
-## Courses
+## MOOCs
+
+Self-paced microlearning courses are stored under [`moocs/`](moocs/). Each course has its own numbered folder, and new courses are added to the table below as they are published.
 
 | # | Course | Standard | Audience | Links |
 |---|--------|----------|----------|-------|
 | 1 | **Improving Health Research Visibility through Metadata:** a microlearning approach using the DDI Codebook standard | DDI Codebook | Health researchers, data managers, data professionals | [Course](https://ddialliance.github.io/Training-Working-Group/moocs/1.Improving%20Health%20Research%20Visibility%20through%20Metadata/) · [Final quiz](https://ddialliance.github.io/Training-Working-Group/moocs/1.Improving%20Health%20Research%20Visibility%20through%20Metadata/final-quiz/) |
 
+*More courses are in development.*
+
 ### 1. Improving Health Research Visibility through Metadata
 
-This course shows how metadata turns raw health research data into resources that others can discover, understand and reuse. It covers the FAIR principles (Findable, Accessible, Interoperable, Reusable), explains the difference between ordinary documentation and machine-readable metadata, and walks through a practical workflow using the DDI Codebook standard.
+The first TWG MOOC. This course shows how metadata turns raw health research data into resources that others can discover, understand and reuse. It covers the FAIR principles (Findable, Accessible, Interoperable, Reusable), explains the difference between ordinary documentation and machine-readable metadata, and walks through a practical workflow using the DDI Codebook standard.
 
 **Modules**
 
@@ -55,7 +61,9 @@ Training-Working-Group/
 
 ## Technical notes
 
-- **Format.** The courses are standalone [H5P](https://h5p.org) exports. The main course uses `H5P.CoursePresentation` and the final quiz uses `H5P.QuestionSet`. Each `index.html` bundles the H5P runtime, styles and content, so no build step or server-side component is needed.
+These notes describe how the current MOOC is built. Future materials may use other formats.
+
+- **Format.** The first course is a standalone [H5P](https://h5p.org) exports. The main course uses `H5P.CoursePresentation` and the final quiz uses `H5P.QuestionSet`. Each `index.html` bundles the H5P runtime, styles and content, so no build step or server-side component is needed.
 - **Hosting.** GitHub Pages serves the files directly from this repository.
 - **External media.** Videos are embedded from YouTube, and the video transcripts are linked on Google Drive. Learners need an internet connection to watch them.
 - **Progress tracking.** H5P emits xAPI statements, but no LRS is set up in this deployment, so the browser does not store progress or scores between sessions.
@@ -76,6 +84,8 @@ Opening `index.html` straight from disk (`file://`) usually works too. Some embe
 
 ## Adding a new course
 
+The steps below are for H5P-based MOOCs. For other kinds of material, open an issue first so the group can agree on where the material should go in the repository.
+
 1. Build the course in H5P (for example on H5P.com or Lumi), then export it as a standalone HTML package.
 2. Create a folder named `moocs/<next-number>.<Course title>/`.
 3. Put the exported `index.html` and its asset folders inside it. If the course has a separate assessment, put it in a subfolder such as `final-quiz/`.
@@ -87,15 +97,19 @@ Opening `index.html` straight from disk (`file://`) usually works too. Some embe
 
 ## Contributing
 
-Corrections, translations and new course proposals are welcome. Please open an issue or pull request, or contact the DDI Alliance Training Working Group through the [DDI Alliance website](https://ddialliance.org).
+Corrections, translations and new course proposals are welcome. Please [open an issue](https://github.com/ddialliance/Training-Working-Group/issues) or [submit a pull request](https://github.com/ddialliance/Training-Working-Group/pulls), or contact the DDI Alliance Training Working Group through the [DDI Alliance website](https://ddialliance.org).
 
 ## Related resources
 
 - [DDI Alliance](https://ddialliance.org)
-- [DDI training materials](https://ddialliance.org/training)
-- [Metadata Editor](https://worldbank.github.io/metadata-editor-docs/), a multi-standard open-source metadata editor
-- [NADA](https://nada.ihsn.org), a microdata cataloguing tool
+- [DDI training materials on Zenodo](https://zenodo.org/communities/ddi_training_material/records), the official DDI Alliance training slide decks and resources
+- [Understanding Metadata](https://closer-cohorts.github.io/understanding-metadata/), from CLOSER
+- [Metadata Editor](https://worldbank.github.io/metadata-editor-docs/), a multi-standard open-source metadata editor ([e-learning](https://dev.ihsn.org/metadata-editor-elearning))
+- [NADA](https://nada.ihsn.org/), a microdata cataloguing tool ([demo catalogue](https://nada-demo.ihsn.org/index.php/home))
+- [DDI Codebook Question Text Injector](https://github.com/DominicKingsleyNzundah/DDI_Codebook_Question_Text_Injector_v1.1), the practice tool used in module 2.3
+- [MEIRU Microdata Portal](https://meiru.mw/microdataportal/index.php/home), an example NADA repository
 
 ## License
 
 This repository does not include a license file yet. Until the Working Group adds one, please contact the DDI Alliance before reusing or adapting these materials.
+
