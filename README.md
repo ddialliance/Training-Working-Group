@@ -10,7 +10,7 @@ The collection will grow over time as the TWG and its contributors add courses o
 
 ## MOOCs
 
-Self-paced microlearning courses are stored under [`moocs/`](moocs/). Each course has its own numbered folder, and new courses are added to the table below as they are published.
+Self-paced microlearning courses are stored under [`moocs/`](https://github.com/ddialliance/Training-Working-Group/tree/main/moocs). Each course has its own numbered folder, and new courses are added to the table below as they are published.
 
 | # | Course | Standard | Audience | Links |
 |---|--------|----------|----------|-------|
@@ -112,4 +112,5 @@ Corrections, translations and new course proposals are welcome. Please [open an 
 ## License
 
 This repository does not include a license file yet. Until the Working Group adds one, please contact the DDI Alliance before reusing or adapting these materials.
+
 
